@@ -1,0 +1,118 @@
+import '../models/product.dart';
+
+/// 商品分类。第一个是「全部」，只用于筛选，不参与上架。
+const List<String> kCategories = ['全部', '食品', '家居', '数码', '服饰', '手作', '其他'];
+
+/// 与后端种子数据一致的演示商品，只给测试里的假接口用。
+///
+/// 页面已经改走 `GET /api/products`，不要再在界面里直接读这份列表。
+const List<Product> kMockProducts = [
+  Product(
+    id: 'p1',
+    title: '手工皂礼盒（三块装）',
+    description: '冷制皂，橄榄油打底，送人自用都合适。每块约 90g，共三块。',
+    priceCents: 6800,
+    category: '手作',
+    sellerName: '阿梅的小铺',
+    stock: 12,
+  ),
+  Product(
+    id: 'p2',
+    title: '现烤黄油曲奇 250g',
+    description: '当天现烤，动物黄油，无添加剂。下单后两天内发货。',
+    priceCents: 3990,
+    category: '食品',
+    sellerName: '烘焙小站',
+    stock: 30,
+  ),
+  Product(
+    id: 'p3',
+    title: '二手富士 X100V 相机',
+    description: '自用机身，快门约 8000 次，带原装电池和腕带，功能正常。',
+    priceCents: 899900,
+    category: '数码',
+    sellerName: '老周相机',
+    stock: 1,
+  ),
+  Product(
+    id: 'p4',
+    title: '手织羊毛围巾',
+    description: '纯羊毛手织，宽 30cm 长 180cm，可机洗低温。',
+    priceCents: 12900,
+    category: '服饰',
+    sellerName: '阿梅的小铺',
+    stock: 5,
+  ),
+  Product(
+    id: 'p5',
+    title: '手捏陶瓷马克杯',
+    description: '粗陶手作，容量约 350ml，每只釉色略有不同。',
+    priceCents: 5900,
+    category: '家居',
+    sellerName: '陶土记',
+    stock: 8,
+  ),
+  Product(
+    id: 'p6',
+    title: '散养土鸡蛋 30 枚',
+    description: '山脚下散养，当天拾蛋，泡沫箱加冰袋顺丰发出。',
+    priceCents: 4550,
+    category: '食品',
+    sellerName: '山脚下的农场',
+    stock: 20,
+  ),
+  Product(
+    id: 'p7',
+    title: '复古机械键盘（已售罄）',
+    description: '青轴 87 键，配原装键帽，已售出，留作展示。',
+    priceCents: 32000,
+    category: '数码',
+    sellerName: '老周相机',
+    stock: 0,
+  ),
+  Product(
+    id: 'p8',
+    title: '亚麻桌布 140×180',
+    description: '水洗亚麻，天然米色，边角手工锁边。',
+    priceCents: 8800,
+    category: '家居',
+    sellerName: '陶土记',
+    stock: 6,
+  ),
+  Product(
+    id: 'p9',
+    title: '手绘帆布包',
+    description: '手工绘制图案，每个都不一样，可装 A4 文件和笔记本电脑。',
+    priceCents: 7500,
+    category: '手作',
+    sellerName: '小满手作',
+    stock: 9,
+  ),
+  Product(
+    id: 'p10',
+    title: '二手轻量登山包 45L',
+    description: '用过两次，背负系统完好，适合两三天的短线徒步。',
+    priceCents: 26000,
+    category: '其他',
+    sellerName: '户外老李',
+    stock: 2,
+  ),
+  Product(
+    id: 'p11',
+    title: '棉麻衬衫（米白）',
+    description: '宽松版型，透气棉麻，男女同款，尺码 S/M/L 可备注。',
+    priceCents: 15900,
+    category: '服饰',
+    sellerName: '小满手作',
+    stock: 4,
+  ),
+  Product(
+    id: 'p12',
+    title: '自制辣椒酱 280g',
+    description: '自家小锅慢炒，无防腐剂，开封后冷藏，一个月内吃完。',
+    priceCents: 2500,
+    category: '食品',
+    sellerName: '山脚下的农场',
+    stock: 15,
+  ),
+];

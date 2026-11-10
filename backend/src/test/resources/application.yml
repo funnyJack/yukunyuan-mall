@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    # 测试统一用内存库，不依赖本机 PostgreSQL，也不碰开发库
+    url: jdbc:h2:mem:mall-test;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  flyway:
+    # 表结构交给 Hibernate 临时生成，Flyway 迁移只在真实 PostgreSQL 上执行
+    enabled: false
